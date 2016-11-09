@@ -1,0 +1,123 @@
+{
+  "drivers": [
+    {
+      "name": "Brian Bailey",
+      "image" : "brian_bailey.png",
+      "Departure": "Siebel Center for Computer Science - Urbana, IL",
+	  "lat_depart" : "40.1138028",
+	  "lon_depart" : "-88.2249052",
+      "Arrival": "Chicago, IL - Union Station",
+	  "lat_arrival" : "41.8787118",
+	  "lon_arrival" : "-87.6394975",
+      "numPassengers": "3"
+    },
+
+    {
+      "name": "Jerry James",
+      "image" : "jerry_james.png",
+      "Departure": "Altgeld Hall - Champaign, IL",
+	  "lat_depart" : "40.10935",
+	  "lon_depart" : "-88.22882",
+      "Arrival": "Schamburg, IL",
+	  "lat_arrival" : "42.0333607",
+	  "lon_arrival" : "-88.0834059",
+      "numPassengers": "5"
+    },
+
+     {
+      "name": "John Smith",
+      "image" : "man.png",
+      "Departure": "Ikenberry Commons - Champaign, IL",
+	  "lat_depart" : "40.103937",
+	  "lon_depart" : "-88.235277",
+      "Arrival": "Buffalo Grove, IL",
+	  "lat_arrival" : "42.1662831",
+	  "lon_arrival" : "-87.9631308",
+      "numPassengers": "2"
+    },
+
+     {
+      "name": "Frank Ocean",
+      "image" : "man_2.png",
+      "Departure": "Illinois Street Residence Hall - Urbana, IL",
+	  "lat_depart" : "40.1101135",
+	  "lon_depart" : "-88.2218778",
+      "Arrival": "Purdue University",		
+	  "lat_arrival" : "40.4237054",
+	  "lon_arrival" : "-86.9211946",
+      "numPassengers": "3"
+    },
+
+     {
+     "name": "Regina Waller",
+      "image" : "woman.png",
+      "Departure": "Florida Avenue Residence Halls - Urbana, IL",
+	  "lat_depart" : "40.0989588",
+	  "lon_depart" : "-88.220347",
+      "Arrival": "St.Louis, Missouri",		
+	  "lat_arrival" : "38.6270025",
+	  "lon_arrival" : "-90.1994042",
+      "numPassengers": "4"
+    },
+
+    {
+      "name": "Suzanne Collins",
+      "image" : "woman_1.png",
+      "Departure": "Illini Union Book Store - Champaign, IL",
+	  "lat_depart" : "40.1082918",
+	  "lon_depart" : "-88.2292368",
+      "Arrival": "Milwaukee, WI",		
+	  "lat_arrival" : "43.0389025",
+	  "lon_arrival" : "-87.9064736",
+      "numPassengers": "3"
+    },
+
+     {
+      "name": "Thomas Gonzales",
+      "image" : "man_3.png",
+      "Departure": "Armory - Champaign, IL",
+	  "lat_depart" : "40.1047489",
+	  "lon_depart" : "-88.2319499",
+      "Arrival": "Indianapolis, IN",		
+	  "lat_arrival" : "39.768403",
+	  "lon_arrival" : "-86.158068",
+      "numPassengers": "4"
+    },
+
+     {
+      "name": "Fred Perry",
+      "image" : "the_man.png",
+      "Departure": "Rantoul, IL",
+	  "lat_depart" : "40.3083672",
+	  "lon_depart" : "-88.1558785",
+      "Arrival": "Des Moines, Iowa",		
+	  "lat_arrival" : "41.6005448",
+	  "lon_arrival" : "-93.6091064",
+      "numPassengers": "3"
+    },
+
+     {
+      "name": "Hannah Brooke",
+      "image" : "woman_3.png",
+      "Departure": "Illini Union Book Store - Champaign, IL",
+	  "lat_depart" : "40.1082918",
+	  "lon_depart" : "-88.2292368",
+      "Arrival": "Kansas City, Kansas",		
+	  "lat_arrival" : "39.114053",
+	  "lon_arrival" : "-94.6274636",
+      "numPassengers": "3"
+    },
+
+     {
+      "name": "Chelsea Sang",
+      "image" : "woman_2.png",
+      "Departure": "Transit Plaza - Champaign, IL",
+	  "lat_depart" : "40.1085817",
+	  "lon_depart" : "-88.2288417",
+      "Arrival": "Detroit, MI",		
+	  "lat_arrival" : "42.331427",
+	  "lon_arrival" : "-83.0457538",
+      "numPassengers": "4"
+    }
+  ]
+}

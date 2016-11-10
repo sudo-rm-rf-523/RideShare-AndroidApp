@@ -2,15 +2,18 @@ package sudo_rm_rf.rideshare;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.ListViewCompat;
+import android.util.Log;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import java.util.ArrayList;
+
 public class NewsFeed extends AppCompatActivity {
-    private ListView mListView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        mListView = (ListView) findViewById(R.id.driver_list_view);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news_feed);
     }

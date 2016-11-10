@@ -1,0 +1,161 @@
+package sudo_rm_rf.rideshare;
+
+/**
+ * This is a helper class for the Driver Activity, it defines helper methods and other utility functions to
+ * parse and decode JSON files.
+ *
+ * Created by Jerry J on 11/9/16.
+ */
+
+import android.content.Context;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.InputStream;
+import java.util.ArrayList;
+
+
+public class Driver {
+
+    //Declaring private instance variables.
+    private String name;
+    private String departure;
+    private String arrival;
+    private double latDeparture;
+    private double lonDeparture;
+    private double latArrival;
+    private double lonArrival;
+    private int    numPassengers;
+
+
+    //Declaring the relevant getters and setters.
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getDeparture() {
+        return departure;
+    }
+
+    public void setDeparture(String departure) {
+        this.departure = departure;
+    }
+
+    public String getArrival() {
+        return arrival;
+    }
+
+    public void setArrival(String arrival) {
+        this.arrival = arrival;
+    }
+
+    public double getLatDeparture() {
+        return latDeparture;
+    }
+
+    public void setLatDeparture(double latDeparture) {
+        this.latDeparture = latDeparture;
+    }
+
+    public double getLonDeparture() {
+        return lonDeparture;
+    }
+
+    public void setLonDeparture(double lonDeparture) {
+        this.lonDeparture = lonDeparture;
+    }
+
+    public double getLatArrival() {
+        return latArrival;
+    }
+
+    public void setLatArrival(double latArrival) {
+        this.latArrival = latArrival;
+    }
+
+    public double getLonArrival() {
+        return lonArrival;
+    }
+
+    public void setLonArrival(double lonArrival) {
+        this.lonArrival = lonArrival;
+    }
+
+    public int getNumPassengers() {
+        return numPassengers;
+    }
+
+    public void setNumPassengers(int numPassengers) {
+        this.numPassengers = numPassengers;
+    }
+
+
+
+    public static ArrayList<Driver> getdriversFromFile(String filename, Context context){
+        final ArrayList<Driver> driverList = new ArrayList<>();
+
+        try {
+            // Load data
+            String jsonString = loadJsonFromAsset("drivers.json", context);
+            JSONObject json = new JSONObject(jsonString);
+            JSONArray drivers = json.getJSONArray("drivers");
+
+            // Get Recipe objects from data
+            for(int i = 0; i < drivers.length(); i++){
+                //Declare a new Driver object.
+                Driver driver = new Driver();
+
+                driver.name = drivers.getJSONObject(i).getString("name");
+                driver.departure = drivers.getJSONObject(i).getString("departure");
+                driver.arrival = drivers.getJSONObject(i).getString("arrival");
+                driver.latDeparture = drivers.getJSONObject(i).getDouble("latDepart");
+                driver.lonDeparture = drivers.getJSONObject(i).getDouble("lonDepart");
+                driver.latArrival = drivers.getJSONObject(i).getDouble("latDepart");
+                driver.lonArrival = drivers.getJSONObject(i).getDouble("lonDepart");
+                driver.numPassengers = drivers.getJSONObject(i).getInt("numPassengers");
+
+                driverList.add(driver);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return driverList;
+    }
+
+    //Method that loads JSON from the specific file.
+    private static String loadJsonFromAsset(String filename, Context context) {
+        String json = null;
+
+        try {
+            InputStream is = context.getAssets().open(filename);
+            int size = is.available();
+            byte[] buffer = new byte[size];
+            is.read(buffer);
+            is.close();
+            json = new String(buffer, "UTF-8");
+        }
+        catch (java.io.IOException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+
+        return json;
+    }
+
+
+
+
+
+
+
+
+
+
+}

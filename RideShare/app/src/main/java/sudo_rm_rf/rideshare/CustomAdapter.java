@@ -30,6 +30,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
     }
 
     public CustomAdapter(ArrayList<Driver> data) {
+
         this.dataset = data;
     }
 

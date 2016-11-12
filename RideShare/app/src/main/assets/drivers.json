@@ -2,7 +2,7 @@
   "drivers": [
     {
       "name": "Brian Bailey",
-      "image" : "brian_bailey.png",
+      "image" : "1",
       "departure": "Siebel Center for Computer Science - Urbana, IL",
 	  "latDepart" : "40.1138028",
 	  "lonDepart" : "-88.2249052",
@@ -14,7 +14,7 @@
 
     {
       "name": "Jerry James",
-      "image" : "jerry_james.png",
+      "image" : "0",
       "departure": "Altgeld Hall - Champaign, IL",
 	  "latDepart" : "40.10935",
 	  "lonDepart" : "-88.22882",
@@ -26,7 +26,7 @@
 
      {
       "name": "John Smith",
-      "image" : "man.png",
+      "image" : "2",
       "departure": "Ikenberry Commons - Champaign, IL",
 	  "latDepart" : "40.103937",
 	  "lonDepart" : "-88.235277",
@@ -38,7 +38,7 @@
 
      {
       "name": "Frank Ocean",
-      "image" : "man_2.png",
+      "image" : "3",
       "departure": "Illinois Street Residence Hall - Urbana, IL",
 	  "latDepart" : "40.1101135",
 	  "lonDepart" : "-88.2218778",
@@ -50,7 +50,7 @@
 
      {
      "name": "Regina Waller",
-      "image" : "woman.png",
+      "image" : "6",
       "departure": "Florida Avenue Residence Halls - Urbana, IL",
 	  "latDepart" : "40.0989588",
 	  "lonDepart" : "-88.220347",
@@ -62,7 +62,7 @@
 
     {
       "name": "Suzanne Collins",
-      "image" : "woman_1.png",
+      "image" : "7",
       "departure": "Illini Union Book Store - Champaign, IL",
 	  "latDepart" : "40.1082918",
 	  "lonDepart" : "-88.2292368",
@@ -74,7 +74,7 @@
 
      {
       "name": "Thomas Gonzales",
-      "image" : "man_3.png",
+      "image" : "4",
       "departure": "Armory - Champaign, IL",
 	  "latDepart" : "40.1047489",
 	  "lonDepart" : "-88.2319499",
@@ -86,7 +86,7 @@
 
      {
       "name": "Fred Perry",
-      "image" : "the_man.png",
+      "image" : "5",
       "departure": "Rantoul, IL",
 	  "latDepart" : "40.3083672",
 	  "lonDepart" : "-88.1558785",
@@ -98,7 +98,7 @@
 
      {
       "name": "Hannah Brooke",
-      "image" : "woman_3.png",
+      "image" : "9",
       "departure": "Illini Union Book Store - Champaign, IL",
 	  "latDepart" : "40.1082918",
 	  "lonDepart" : "-88.2292368",
@@ -110,7 +110,7 @@
 
      {
       "name": "Chelsea Sang",
-      "image" : "woman_2.png",
+      "image" : "8",
       "departure": "Transit Plaza - Champaign, IL",
 	  "latDepart" : "40.1085817",
 	  "lonDepart" : "-88.2288417",

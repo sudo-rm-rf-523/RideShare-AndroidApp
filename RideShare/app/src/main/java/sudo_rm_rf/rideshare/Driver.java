@@ -8,6 +8,9 @@ package sudo_rm_rf.rideshare;
  */
 
 import android.content.Context;
+import android.widget.ImageView;
+
+import junit.framework.Assert;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -19,6 +22,9 @@ import java.util.ArrayList;
 
 public class Driver {
 
+    final private static int[] images = {R.drawable.jerry_james, R.drawable.brian_bailey, R.drawable.man, R.drawable.man_2, R.drawable.man_3, R.drawable.the_man, R.drawable.woman, R.drawable.woman_1, R.drawable.woman_2, R.drawable.woman_3};
+
+
     //Declaring private instance variables.
     private String name;
     private String departure;
@@ -28,6 +34,7 @@ public class Driver {
     private double latArrival;
     private double lonArrival;
     private int    numPassengers;
+    private int profilePicture;
 
 
     //Declaring the relevant getters and setters.
@@ -96,6 +103,9 @@ public class Driver {
     }
 
 
+    public int getProfilePicture() {return profilePicture; }
+
+
 
     public static ArrayList<Driver> getdriversFromFile(String filename, Context context){
         final ArrayList<Driver> driverList = new ArrayList<>();
@@ -119,7 +129,7 @@ public class Driver {
                 driver.latArrival = drivers.getJSONObject(i).getDouble("latDepart");
                 driver.lonArrival = drivers.getJSONObject(i).getDouble("lonDepart");
                 driver.numPassengers = drivers.getJSONObject(i).getInt("numPassengers");
-
+                driver.profilePicture =  images[drivers.getJSONObject(i).getInt("image")];
                 driverList.add(driver);
             }
         } catch (JSONException e) {
@@ -148,13 +158,6 @@ public class Driver {
 
         return json;
     }
-
-
-
-
-
-
-
 
 
 

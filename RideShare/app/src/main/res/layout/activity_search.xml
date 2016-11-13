@@ -30,6 +30,11 @@
             android:layout_weight=".5"
             android:hint="From Place"
             android:textAlignment="center"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text = "Switch Activity"
+            android:id="@+id/button"/>
 
     </LinearLayout>
 </RelativeLayout>

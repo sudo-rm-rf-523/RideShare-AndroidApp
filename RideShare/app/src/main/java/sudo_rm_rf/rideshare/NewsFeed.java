@@ -33,9 +33,6 @@ public class NewsFeed extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news_feed);
 
-        //getActionBar().setDisplayHomeAsUpEnabled(true);
-
-
 
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
 
@@ -52,7 +49,11 @@ public class NewsFeed extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
 
+
+
     }
+
+
 
 //    @Override
 //    public boolean onOptionsItemSelected(MenuItem item) {

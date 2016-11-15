@@ -1,40 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:layout_width="200dip"
+        android:layout_height="50dip"
+        android:text="RideShare"
+        android:textSize="40dip"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textStyle="bold"
+        android:textColor="@color/cardview_dark_background"
+        android:layout_centerHorizontal="true"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        >
+
+
         <EditText
             android:id="@+id/etxt_fromdate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="200dip"
+            android:layout_height="30dip"
             android:layout_weight=".5"
             android:hint="From Date"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            android:background="#ffffff"/>
 
         <EditText
             android:id="@+id/etxt_todate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="200dip"
+            android:layout_height="30dip"
             android:layout_weight=".5"
             android:hint="Time"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            android:background="#ffffff"
+            android:layout_marginTop="15dip"/>
         <EditText
             android:id="@+id/from_place"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="200dip"
+            android:layout_height="30dip"
             android:layout_weight=".5"
             android:hint="From Place"
-            android:textAlignment="center"/>
+            android:textAlignment="center"
+            android:background="#ffffff"
+            android:layout_marginTop="15dip"/>
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="200dip"
             android:layout_height="wrap_content"
-            android:text = "Switch Activity"
-            android:id="@+id/button"/>
+            android:text = "Search Rides"
+            android:textColor="@color/white"
+            android:background="@color/cardview_dark_background"
+            android:id="@+id/button"
+            android:layout_marginTop="15dip"/>
 
     </LinearLayout>
 </RelativeLayout>

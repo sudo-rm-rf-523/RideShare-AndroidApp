@@ -61,7 +61,7 @@ public class searchActivity extends AppCompatActivity implements View.OnClickLis
         v.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                Intent intent = new Intent(searchActivity.this, NewsFeed.class);
+                Intent intent = new Intent(searchActivity.this, PersonProfilePage.class);
                 startActivity(intent);
             }
 

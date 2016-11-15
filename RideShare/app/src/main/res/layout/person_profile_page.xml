@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:background="@color/colorPrimary">
+
+    <ImageView
+        android:id="@+id/person_photo"
+        android:layout_width="100dp"
+
+        android:layout_height="100dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="16dp"
+        />
+
+    <!--Name-->
+    <TextView
+        android:id="@id/person_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="Name"
+        android:textColor="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:layout_marginBottom="16dp"
+        />
+
+    <!--Ride info-->
+    <TextView
+        android:id="@+id/leave_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="@string/date"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        />
+
+    <TextView
+        android:id="@+id/leave_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="@string/time"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        />
+
+    <TextView
+        android:id="@+id/from_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="@string/from_place"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        />
+
+    <TextView
+        android:id="@+id/to_place"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="@string/to_place"
+        android:textColor="@color/colorPrimaryDark"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        />
+    
+    <Button
+        android:id="@+id/invite_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:textSize="24sp"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@android:color/white"
+        android:text="Send Invite"/>
+
+</LinearLayout>

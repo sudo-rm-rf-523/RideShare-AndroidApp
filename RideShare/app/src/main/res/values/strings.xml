@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">RideShare Back to Normal</string>
+    <string name="date"><b>DATE</b></string>
+    <string name="time"><b>TIME</b></string>
+    <string name="from_place"><b>FROM</b></string>
+    <string name="to_place"><b>TO</b></string>
 </resources>

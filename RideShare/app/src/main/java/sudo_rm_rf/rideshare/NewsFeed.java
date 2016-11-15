@@ -49,8 +49,6 @@ public class NewsFeed extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
 
-
-
     }
 
 

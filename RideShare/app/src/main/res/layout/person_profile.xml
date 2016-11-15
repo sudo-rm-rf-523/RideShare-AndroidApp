@@ -9,12 +9,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/cv"
+        app:cardElevation="0dp"
         >
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp"
+            android:padding="13dp"
             >
 
             <de.hdodenhof.circleimageview.CircleImageView
@@ -24,13 +25,19 @@
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
                 android:layout_marginRight="16dp"
+                android:layout_marginTop="12dp"
                 app:civ_border_width="2dp"
                 app:civ_border_color="#FF000000"
                 />
+
             <View
-                android:layout_height="match_parent"
-                android:layout_width="100dp"
-                android:background="@android:color/darker_gray"/>
+                android:layout_width="2dp"
+                android:background="@android:color/darker_gray"
+                android:layout_height="110dp"
+                android:layout_toRightOf="@+id/person_photo"
+                android:layout_marginTop="7dp"
+                />
+
 
             <TextView
                 android:layout_width="wrap_content"
@@ -40,6 +47,7 @@
                 android:layout_alignParentTop="true"
                 android:textSize="30sp"
                 android:textColor="@color/colorAccent"
+                android:paddingLeft="20dp"
                 />
 
             <TextView
@@ -50,6 +58,7 @@
                 android:layout_below="@+id/person_name"
                 android:textSize = "15sp"
                 android:textColor="@color/colorAccent"
+                android:paddingLeft="20dp"
                 />
 
         </RelativeLayout>

@@ -9,6 +9,7 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.ListViewCompat;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -33,6 +34,7 @@ public class NewsFeed extends AppCompatActivity {
         setContentView(R.layout.activity_news_feed);
 
         //getActionBar().setDisplayHomeAsUpEnabled(true);
+
 
 
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);

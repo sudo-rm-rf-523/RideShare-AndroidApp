@@ -4,60 +4,141 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimary">
 
-    <TextView
-        android:layout_width="200dip"
-        android:layout_height="50dip"
-        android:text="RideShare"
-        android:textSize="40dip"
-        android:fontFamily="sans-serif-smallcaps"
-        android:textStyle="bold"
-        android:textColor="@color/cardview_dark_background"
-        android:layout_centerHorizontal="true"/>
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="50dip"-->
+        <!--android:layout_marginTop="40dip"-->
+        <!--android:text="RideShare"-->
+        <!--android:textSize="40dip"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textColor="@color/cardview_dark_background"-->
+        <!--android:layout_centerHorizontal="true"/>-->
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_marginTop="35dip"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         >
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        >
+        <EditText
+            android:id="@+id/from_place"
+            android:layout_width="180dip"
+            android:layout_height="40dip"
+            android:layout_weight=".5"
+            android:hint=" From Place"
+            android:textSize="14dip"
+            android:background="#ffffff"
+            android:drawableLeft="@drawable/from_icon"/>
 
         <EditText
+            android:id="@+id/to_place"
+            android:layout_width="180dip"
+            android:layout_height="40dip"
+            android:layout_weight=".5"
+            android:hint=" To Place"
+            android:textSize="14dip"
+            android:background="#ffffff"
+            android:layout_marginLeft="15dip"
+            android:drawableLeft="@drawable/to_icon"/>
+    </LinearLayout>
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dip"
+            android:gravity="center_horizontal"
+            >
+            <RadioButton android:id="@+id/radio_pirates"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="One Way "
+                android:onClick="onRadioButtonClicked"/>
+            <RadioButton android:id="@+id/radio_ninjas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Round Trip"
+                android:onClick="onRadioButtonClicked"
+                android:layout_marginLeft="40dip"/>
+        </RadioGroup>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        >
+        <EditText
             android:id="@+id/etxt_fromdate"
-            android:layout_width="200dip"
-            android:layout_height="30dip"
+            android:layout_width="180dip"
+            android:layout_height="40dip"
             android:layout_weight=".5"
             android:hint="From Date"
-            android:textAlignment="center"
-            android:background="#ffffff"/>
+            android:textSize="14dip"
+            android:background="#ffffff"
+            android:layout_marginTop="15dip"
+            android:drawableLeft="@android:drawable/ic_menu_my_calendar"/>
 
         <EditText
             android:id="@+id/etxt_todate"
-            android:layout_width="200dip"
-            android:layout_height="30dip"
+            android:layout_width="180dip"
+            android:layout_height="40dip"
+            android:layout_weight=".5"
+            android:hint="To Date"
+            android:textSize="14dip"
+            android:background="#ffffff"
+            android:layout_marginTop="15dip"
+            android:layout_marginLeft="15dip"
+            android:drawableLeft="@android:drawable/ic_menu_my_calendar"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <EditText
+            android:id="@+id/etxt_time"
+            android:layout_width="290dip"
+            android:layout_height="40dip"
             android:layout_weight=".5"
             android:hint="Time"
-            android:textAlignment="center"
+            android:textSize="14dip"
             android:background="#ffffff"
-            android:layout_marginTop="15dip"/>
-        <EditText
-            android:id="@+id/from_place"
-            android:layout_width="200dip"
-            android:layout_height="30dip"
-            android:layout_weight=".5"
-            android:hint="From Place"
-            android:textAlignment="center"
-            android:background="#ffffff"
-            android:layout_marginTop="15dip"/>
+            android:layout_marginTop="20dip"
+            android:drawableLeft="@android:drawable/ic_menu_day"/>
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:layout_marginTop="20dip"
+            android:layout_marginLeft="15dip">
+
+        </Spinner>
+
+\
+    </LinearLayout>
         <Button
-            android:layout_width="200dip"
-            android:layout_height="wrap_content"
+            android:layout_width="380dip"
+            android:layout_height="45dip"
             android:text = "Search Rides"
+            android:textSize="18dp"
+            android:textAlignment="center"
             android:textColor="@color/white"
             android:background="@color/cardview_dark_background"
             android:id="@+id/button"
-            android:layout_marginTop="15dip"/>
+            android:layout_marginTop="22dip"
+            />
 
     </LinearLayout>
 </RelativeLayout>

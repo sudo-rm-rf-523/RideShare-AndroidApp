@@ -17,7 +17,8 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyAFKATvXQuHTxLXRpa4SffIqNa28CDaYbo"/>
-        <activity android:name=".searchActivity">
+        <activity android:name=".searchActivity"
+            android:theme="@style/AppSearchTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

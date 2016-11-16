@@ -9,5 +9,12 @@ public class PersonProfilePage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_person_profile_page);
+
+        Bundle b = getIntent().getExtras();
+        String arrival = b.getString("arrival");
+        String name = b.getString("name");
+
+        System.out.println(arrival);
+        System.out.println(name);
     }
 }

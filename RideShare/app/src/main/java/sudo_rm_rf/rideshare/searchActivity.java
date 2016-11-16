@@ -36,7 +36,6 @@ import java.util.Locale;
 public class searchActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-
     //UI References
     private EditText fromDateEtxt;
     private EditText toDateEtxt;

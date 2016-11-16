@@ -46,7 +46,7 @@
        "pointOfInterest" :"Illinois Street Residence Hall",
        "latDepart" : "40.1101135",
 	  "lonDepart" : "-88.2218778",
-      "arrival": "Purdue University",		
+      "arrival": "Purdue University",
 	  "latArrival" : "40.4237054",
 	  "lonArrival" : "-86.9211946",
       "numPassengers": "3"
@@ -59,7 +59,7 @@
        "pointOfInterest" :"Florida Avenue Residence Halls",
        "latDepart" : "40.0989588",
 	  "lonDepart" : "-88.220347",
-      "arrival": "St.Louis, Missouri",		
+      "arrival": "St.Louis, MO",
 	  "latArrival" : "38.6270025",
 	  "lonArrival" : "-90.1994042",
       "numPassengers": "4"
@@ -98,7 +98,7 @@
        "pointOfInterest" :"NONE",
        "latDepart" : "40.3083672",
 	  "lonDepart" : "-88.1558785",
-      "arrival": "Des Moines, Iowa",		
+      "arrival": "Des Moines, IA",
 	  "latArrival" : "41.6005448",
 	  "lonArrival" : "-93.6091064",
       "numPassengers": "3"
@@ -111,7 +111,7 @@
        "pointOfInterest" :"Illini Union Book Store",
        "latDepart" : "40.1082918",
 	  "lonDepart" : "-88.2292368",
-      "arrival": "Kansas City, Kansas",		
+      "arrival": "Kansas City, KS",
 	  "latArrival" : "39.114053",
 	  "lonArrival" : "-94.6274636",
       "numPassengers": "3"

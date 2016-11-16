@@ -28,6 +28,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 
 import android.content.Intent;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TimePicker;
 
@@ -40,6 +41,10 @@ import com.google.android.gms.maps.model.LatLngBounds;
 import android.view.View.OnClickListener;
 import java.util.Calendar;
 import java.util.Locale;
+
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 
 public class OneFragment extends Fragment implements View.OnClickListener {
@@ -62,6 +67,9 @@ public class OneFragment extends Fragment implements View.OnClickListener {
     private static final int PLACE_PICKER_REQUEST = 1;
     private static final LatLngBounds BOUNDS_MOUNTAIN_VIEW = new LatLngBounds(
             new LatLng(37.398160, -122.180831), new LatLng(37.430610, -121.972090));
+
+    RadioGroup radio_group;
+
 
     public OneFragment() {
         // Required empty public constructor
@@ -97,6 +105,7 @@ public class OneFragment extends Fragment implements View.OnClickListener {
         mspin.setAdapter(adapter);
 
     }
+
 
     @Override
     public void onClick(View view) {
@@ -187,11 +196,13 @@ public class OneFragment extends Fragment implements View.OnClickListener {
 
     }
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View myView = inflater.inflate(R.layout.fragment_one, container, false);
+        final View myView = inflater.inflate(R.layout.fragment_one, container, false);
         final Button v = (Button) myView.findViewById(R.id.button);
         dateFormatter = new java.text.SimpleDateFormat("dd-MM-yyyy", Locale.US);
         findViewsById(myView);
@@ -207,7 +218,31 @@ public class OneFragment extends Fragment implements View.OnClickListener {
             }
 
         });
+        radio_group = (RadioGroup) myView.findViewById(R.id.trip_type);
+        radio_group.check(0);
+
         return myView;
+    }
+
+    public void onRadioButtonClicked(View view) {
+        // Is the button now checked?
+        boolean checked = ((RadioButton) view).isChecked();
+
+        // Check which radio button was clicked
+        switch(view.getId()) {
+            case R.id.one_way:
+                if (checked)
+                    toDateEtxt.setEnabled(false);
+                    toDateEtxt.setVisibility(View.GONE);
+                    // Pirates are the best
+                    break;
+            case R.id.round_trip:
+                if (checked)
+                    // Ninjas rule
+                    toDateEtxt.setEnabled(true);
+                    toDateEtxt.setVisibility(View.VISIBLE);
+                    break;
+        }
     }
 
     @Override

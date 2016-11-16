@@ -16,7 +16,8 @@
         android:id="@+id/layoutDots"
         android:layout_width="match_parent"
         android:layout_height="@dimen/dots_height"
-        android:layout_alignParentBottom="true"
+        android:layout_marginTop="565dip"
+        android:layout_alignParentBottom="false"
         android:layout_marginBottom="@dimen/dots_margin_bottom"
         android:gravity="center"
         android:orientation="horizontal"></LinearLayout>
@@ -29,13 +30,14 @@
         android:background="@android:color/white" />
 
     <Button
-        android:id="@+id/btn_next"
-        android:layout_width="wrap_content"
+        android:layout_below="@+id/layoutDots"
+        android:id="@+id/btn_fb"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:background="@null"
-        android:text="NEXT"
+        android:background="@android:color/holo_blue_dark"
+        android:text="Facebook Login"
         android:textColor="@android:color/white" />
 
 </RelativeLayout>

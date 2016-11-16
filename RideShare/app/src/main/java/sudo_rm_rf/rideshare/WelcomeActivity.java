@@ -41,10 +41,8 @@ public class WelcomeActivity extends AppCompatActivity implements OnClickListene
 
         viewPager = (ViewPager) findViewById(R.id.view_pager);
         dotsLayout = (LinearLayout) findViewById(R.id.layoutDots);
-        btnNext = (Button) findViewById(R.id.btn_next);
+        btnFb = (Button) findViewById(R.id.btn_fb);
 
-        View inflatedView = getLayoutInflater().inflate(R.layout.welcome_slide3, null);
-        btnFb = (Button) inflatedView.findViewById(R.id.facebook);
 
 
         // layouts of all welcome sliders
@@ -64,33 +62,24 @@ public class WelcomeActivity extends AppCompatActivity implements OnClickListene
         viewPager.setAdapter(myViewPagerAdapter);
         viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
 
-        btnNext.setOnClickListener(new OnClickListener() {
+        btnFb.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 // checking for last page
                 // if last page home screen will be launched
-                int current = getItem(+1);
-                if (current < layouts.length) {
-                    // move to next screen
-                    viewPager.setCurrentItem(current);
-                } else {
-                    //launchHomeScreen();
-                    startActivity(new Intent(WelcomeActivity.this,TabActivity.class ));
-                    System.out.print("Method invoked");
-                }
-            }
-        });
-
-
-        btnFb.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // checking for last page
-                // if last page home screen will be launched
+//                int current = getItem(+1);
+//                if (current < layouts.length) {
+//                    // move to next screen
+//                    viewPager.setCurrentItem(current);
+//                } else {
+//                    //launchHomeScreen();
+//                    startActivity(new Intent(WelcomeActivity.this,TabActivity.class ));
+//                    System.out.print("Method invoked");
+//                }
                 startActivity(new Intent(WelcomeActivity.this,TabActivity.class ));
-                System.out.print("Method invoked");
             }
         });
+
 
     }
 
@@ -108,6 +97,7 @@ public class WelcomeActivity extends AppCompatActivity implements OnClickListene
 
     }
 
+
     //  viewpager change listener
     ViewPager.OnPageChangeListener viewPagerPageChangeListener = new ViewPager.OnPageChangeListener() {
 
@@ -118,10 +108,10 @@ public class WelcomeActivity extends AppCompatActivity implements OnClickListene
             // changing the next button text 'NEXT' / 'GOT IT'
             if (position == layouts.length - 1) {
                 // last page. make button text to GOT IT
-                btnNext.setText(getString(R.string.start));
+                //btnNext.setText(getString(R.string.start));
             } else {
                 // still pages are left
-                btnNext.setText(getString(R.string.next));
+                //btnNext.setText(getString(R.string.next));
             }
         }
 

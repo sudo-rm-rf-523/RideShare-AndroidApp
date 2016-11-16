@@ -48,13 +48,15 @@
             android:orientation="horizontal"
             android:layout_marginTop="15dip"
             android:gravity="center_horizontal"
+            android:id = "@+id/trip_type"
             >
-            <RadioButton android:id="@+id/radio_pirates"
+            <RadioButton android:id="@+id/one_way"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="One Way "
-                android:onClick="onRadioButtonClicked"/>
-            <RadioButton android:id="@+id/radio_ninjas"
+                android:onClick="onRadioButtonClicked"
+                />
+            <RadioButton android:id="@+id/round_trip"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Round Trip"

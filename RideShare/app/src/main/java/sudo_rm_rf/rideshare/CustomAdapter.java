@@ -42,7 +42,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                 public void onClick(View view) {
                     Bundle b = new Bundle();
                     b.putString("name", driver.getName());
+                    b.putString("departure", driver.getDeparture());
                     b.putString("arrival", driver.getArrival());
+                    b.putString("time", driver.getTime());
+                    b.putString("date", driver.getDate());
                     Intent cur = new Intent(itemView.getContext(),PersonProfilePage.class);
                     cur.putExtras(b);
                     itemView.getContext().startActivity(cur);

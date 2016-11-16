@@ -10,7 +10,9 @@
       "arrival": "Chicago, IL",
 	  "latArrival" : "41.8787118",
 	  "lonArrival" : "-87.6394975",
-      "numPassengers": "3"
+      "numPassengers": "3",
+      "time": "4:30 PM",
+      "date": "February 2, 2016"
     },
 
     {
@@ -23,7 +25,9 @@
       "arrival": "Schamburg, IL",
 	  "latArrival" : "42.0333607",
 	  "lonArrival" : "-88.0834059",
-      "numPassengers": "5"
+      "numPassengers": "5",
+      "time": "4:30 PM",
+      "date": "February 2, 2016"
     },
 
      {
@@ -36,7 +40,9 @@
       "arrival": "Buffalo Grove, IL",
 	  "latArrival" : "42.1662831",
 	  "lonArrival" : "-87.9631308",
-      "numPassengers": "2"
+      "numPassengers": "2",
+       "time": "4:30 PM",
+       "date": "February 2, 2016"
     },
 
      {
@@ -49,7 +55,9 @@
       "arrival": "Purdue University",
 	  "latArrival" : "40.4237054",
 	  "lonArrival" : "-86.9211946",
-      "numPassengers": "3"
+      "numPassengers": "3",
+       "time": "4:30 PM",
+       "date": "February 2, 2016"
     },
 
      {
@@ -62,7 +70,9 @@
       "arrival": "St.Louis, MO",
 	  "latArrival" : "38.6270025",
 	  "lonArrival" : "-90.1994042",
-      "numPassengers": "4"
+      "numPassengers": "4",
+       "time": "4:30 PM",
+       "date": "February 2, 2016"
     },
 
     {
@@ -75,7 +85,9 @@
       "arrival": "Milwaukee, WI",		
 	  "latArrival" : "43.0389025",
 	  "lonArrival" : "-87.9064736",
-      "numPassengers": "3"
+      "numPassengers": "3",
+      "time": "4:30 PM",
+      "date": "February 2, 2016"
     },
 
      {
@@ -88,7 +100,9 @@
       "arrival": "Indianapolis, IN",		
 	  "latArrival" : "39.768403",
 	  "lonArrival" : "-86.158068",
-      "numPassengers": "4"
+      "numPassengers": "4",
+       "time": "4:30 PM",
+       "date": "February 2, 2016"
     },
 
      {
@@ -101,7 +115,9 @@
       "arrival": "Des Moines, IA",
 	  "latArrival" : "41.6005448",
 	  "lonArrival" : "-93.6091064",
-      "numPassengers": "3"
+      "numPassengers": "3",
+       "time": "4:30 PM",
+       "date": "February 2, 2016"
     },
 
      {
@@ -114,7 +130,9 @@
       "arrival": "Kansas City, KS",
 	  "latArrival" : "39.114053",
 	  "lonArrival" : "-94.6274636",
-      "numPassengers": "3"
+      "numPassengers": "3",
+       "time": "4:30 PM",
+       "date": "February 2, 2016"
     },
 
      {
@@ -127,7 +145,9 @@
       "arrival": "Detroit, MI",		
 	  "latArrival" : "42.331427",
 	  "lonArrival" : "-83.0457538",
-      "numPassengers": "4"
+      "numPassengers": "4",
+       "time": "4:30 PM",
+       "date": "February 2, 2016"
     }
   ]
 }

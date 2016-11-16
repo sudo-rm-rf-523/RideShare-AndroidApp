@@ -29,6 +29,8 @@ public class Driver {
     private String name;
     private String departure;
     private String arrival;
+    private String time;
+    private String date;
     private double latDeparture;
     private double lonDeparture;
     private double latArrival;
@@ -102,6 +104,14 @@ public class Driver {
         this.numPassengers = numPassengers;
     }
 
+    public String getTime() {return time;}
+
+    public void setTime(String time) {this.time = time;}
+
+    public String getDate() {return date;}
+
+    public void setDate(String date) {this.date = date;}
+
 
     public int getProfilePicture() {return profilePicture; }
 
@@ -130,6 +140,8 @@ public class Driver {
                 driver.lonArrival = drivers.getJSONObject(i).getDouble("lonDepart");
                 driver.numPassengers = drivers.getJSONObject(i).getInt("numPassengers");
                 driver.profilePicture =  images[drivers.getJSONObject(i).getInt("image")];
+                driver.time = drivers.getJSONObject(i).getString("time");
+                driver.date = drivers.getJSONObject(i).getString("date");
                 driverList.add(driver);
             }
         } catch (JSONException e) {

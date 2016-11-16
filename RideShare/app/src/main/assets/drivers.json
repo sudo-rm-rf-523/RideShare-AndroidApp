@@ -37,7 +37,7 @@
        "pointOfInterest" :"Ikenberry Commons",
        "latDepart" : "40.103937",
 	  "lonDepart" : "-88.235277",
-      "arrival": "Buffalo Grove, IL",
+      "arrival": "Elgin, IL",
 	  "latArrival" : "42.1662831",
 	  "lonArrival" : "-87.9631308",
       "numPassengers": "2",
@@ -91,7 +91,7 @@
     },
 
      {
-      "name": "Thomas Gonzales",
+      "name": "Tom Gonzales",
       "image" : "4",
       "departure": "Champaign, IL",
        "pointOfInterest" :"Armory",

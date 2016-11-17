@@ -46,6 +46,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                     b.putString("arrival", driver.getArrival());
                     b.putString("time", driver.getTime());
                     b.putString("date", driver.getDate());
+                    b.putInt("picture", driver.getProfilePicture());
                     Intent cur = new Intent(itemView.getContext(),PersonProfilePage.class);
                     cur.putExtras(b);
                     itemView.getContext().startActivity(cur);

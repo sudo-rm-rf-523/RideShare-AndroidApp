@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/chicago">
+    android:background="@color/cardview_light_background">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -14,7 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
-            android:background="@drawable/chicago"
+            android:background="@drawable/wallpaper"
              />
 
         <de.hdodenhof.circleimageview.CircleImageView
@@ -37,11 +37,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/header_cover_image"
-            android:background="#fff"
+            android:background="@color/colorPrimary"
             android:elevation="4dp"
             android:paddingBottom="24dp">
-
-
 
 
             <TextView
@@ -66,50 +64,11 @@
             android:orientation="vertical"
             android:background="@android:color/transparent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_marginBottom="3dp"
-                android:layout_marginTop="3dp"
-                android:background="#fff"
-                android:elevation="4dp"
-                android:padding="20dp">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/person_departure"
-                    android:layout_weight='1'
-                    android:ellipsize="end"
-                    android:textSize = "12sp"
-                    android:textColor="@color/colorAccent"
-                    android:paddingLeft="20dp"
-                    />
-                <View
-                    android:layout_width="35dp"
-                    android:id="@+id/horizontal_bar"
-                    android:background="@android:color/darker_gray"
-                    android:layout_height="2dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginLeft="10dp"
-                    />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/person_arrival"
-                    android:layout_weight="0"
-                    android:ellipsize="end"
-                    android:maxLines="1"
-                    android:textSize = "12sp"
-                    android:textColor="@color/colorAccent"
-                    android:paddingLeft="20dp"
-                    />
-
-            </LinearLayout>
 
             <TextView
+                android:drawableLeft="@drawable/ic_clock"
+                android:drawablePadding="20dp"
                 android:id="@+id/leave_time"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -119,9 +78,35 @@
                 android:background="#fff"
                 android:elevation="4dp"
                 android:padding="20dp"
-                android:text="Android Profile XMl UI Design" />
+                 />
 
             <TextView
+                android:drawableLeft="@drawable/ic_action_start"
+                android:drawablePadding="20dp"
+                android:id="@+id/from_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#fff"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:text="Android Profile UI Design" />
+
+            <TextView
+                android:drawableLeft="@drawable/ic_destination"
+                android:drawablePadding="20dp"
+                android:id="@+id/to_place"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#fff"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:text="Android Profile UI Design" />
+
+            <TextView
+                android:drawableLeft="@drawable/ic_calendar_final"
+                android:drawablePadding="20dp"
                 android:id="@+id/leave_date"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -130,6 +115,18 @@
                 android:elevation="4dp"
                 android:padding="20dp"
                 android:text="Android Profile UI Design" />
+
+            <TextView
+                android:drawableLeft="@drawable/ic_car"
+                android:drawablePadding="20dp"
+                android:id="@+id/car_make_and_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:background="#fff"
+                android:elevation="4dp"
+                android:padding="20dp"
+                android:text="2007 Ford Fiesta" />
 
 
             <Button

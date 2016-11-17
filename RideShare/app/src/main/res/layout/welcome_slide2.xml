@@ -5,21 +5,31 @@
     android:background="@color/colorPrimary">
 
     <LinearLayout
+        android:id="@+id/banner"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:gravity="center_horizontal"
+        android:layout_height="420dp"
+        android:gravity="center_vertical"
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="@dimen/img_width_height"
-            android:layout_height="@dimen/img_width_height"
-            android:src="@drawable/jerry_james" />
+            android:layout_width="match_parent"
+            android:layout_height="360dp"
+            android:src="@drawable/login_newsfeed" />
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="@android:color/white"
+        android:layout_below="@+id/banner">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Welcome to RideShare"
+            android:layout_marginTop="20dp"
+            android:text="Newsfeed Search"
             android:textColor="@color/colorAccent"
             android:textSize="@dimen/slide_title"
             android:textStyle="bold" />
@@ -30,7 +40,7 @@
             android:layout_marginTop="20dp"
             android:paddingLeft="@dimen/desc_padding"
             android:paddingRight="@dimen/desc_padding"
-            android:text="RideShare Helps you get to\n where you want faster, cheaper \n and learn UI design"
+            android:text="Easy searching for driver and\npassengers to make scheduling\nas simple as possible"
             android:textAlignment="center"
             android:textColor="@color/colorAccent"
             android:textSize="@dimen/slide_desc" />

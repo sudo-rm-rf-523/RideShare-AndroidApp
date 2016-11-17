@@ -33,6 +33,9 @@ public class NewsFeed extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news_feed);
 
+        getSupportActionBar().setDisplayOptions(android.app.ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.news_feed_action_bar);
+
 
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
 

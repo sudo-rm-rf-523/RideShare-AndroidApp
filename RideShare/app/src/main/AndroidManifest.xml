@@ -30,7 +30,9 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".NewsFeed">
+        <activity android:name=".NewsFeed"
+            android:theme="@style/NewsFeedBar"
+            >
 
             <!-- android:parentActivityName=".searchActivity" -->
             <!-- &lt;!&ndash; Parent activity meta-data to support 4.0 and lower &ndash;&gt; -->

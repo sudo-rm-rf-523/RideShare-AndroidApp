@@ -15,7 +15,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/dollars"
         android:layout_marginTop="20dp"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
 
 
         <TextView
@@ -42,6 +43,7 @@
 
         <EditText
             android:inputType="textMultiLine"
+            android:id="@+id/edit_query"
             android:scrollbars="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -49,5 +51,18 @@
             android:maxLines="10"
             android:layout_marginTop="20dp"
             android:hint="Optional Feedback "/>
+
     </LinearLayout>
+
+    <Button
+        android:text="Submit Review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/button3"
+        android:layout_alignTop="@+id/linearLayout"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="202dp"
+        />
+
+
 </RelativeLayout>

@@ -12,7 +12,7 @@
         android:paddingLeft="0dp"
         android:paddingRight="0dp"
         android:paddingTop="0dp"
-        android:background="@drawable/chicago"
+        android:background="@color/cardview_dark_background"
         tools:context="sudo_rm_rf.rideshare.NewsFeed"
 
         >

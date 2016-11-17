@@ -63,7 +63,7 @@ public class searchActivity extends AppCompatActivity implements View.OnClickLis
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
 
-        getSupportActionBar().setDisplayOptions(android.app.ActionBar.DISPLAY_SHOW_CUSTOM);
+        //getSupportActionBar().setDisplayOptions(android.app.ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.actionbar);
 
         //Code that let's you switch between activities.
@@ -171,13 +171,14 @@ public class searchActivity extends AppCompatActivity implements View.OnClickLis
         final Calendar c = Calendar.getInstance();
         mHour = c.get(Calendar.HOUR_OF_DAY);
         mMinute = c.get(Calendar.MINUTE);
+        final String am_pm = mHour >= 12 ? "PM" : "AM";
         timePickerDialog = new TimePickerDialog(this,
                 new TimePickerDialog.OnTimeSetListener() {
 
                     public void onTimeSet(TimePicker view, int hourOfDay,
                                           int minute) {
 
-                        timeEtxt.setText(hourOfDay + ":" + minute);
+                        timeEtxt.setText(hourOfDay + ":" + minute + am_pm);
                     }
                 }, mHour, mMinute, false);
 

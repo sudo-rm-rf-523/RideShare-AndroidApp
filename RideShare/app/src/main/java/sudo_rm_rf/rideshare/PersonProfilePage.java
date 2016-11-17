@@ -1,6 +1,7 @@
 package sudo_rm_rf.rideshare;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -74,6 +75,11 @@ public class PersonProfilePage extends AppCompatActivity {
 
     }
 
+    public void makePaymentClick(View view) {
+        Intent intent = new Intent(this, PaymentActivity.class);
+        startActivity(intent);
+    }
+    
     private void findViewsById() {
         dateView = (TextView) findViewById(R.id.leave_date);
         timeView = (TextView) findViewById(R.id.leave_time);

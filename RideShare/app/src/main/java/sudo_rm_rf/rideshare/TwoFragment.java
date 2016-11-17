@@ -4,20 +4,26 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.util.ArrayList;
 
-/**
- * A simple {@link Fragment} subclass.
- * Activities that contain this fragment must implement the
- * {@link TwoFragment.OnFragmentInteractionListener} interface
- * to handle interaction events.
- * Use the {@link TwoFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
+
+
 public class TwoFragment extends Fragment {
+
+    private static RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
+    private static RecyclerView recyclerView;
+    private static ArrayList<Driver> data;
+    static View.OnClickListener myOnClickListener;
+    private static ArrayList<Integer> removedItems;
+
     public TwoFragment() {
         // Required empty public constructor
     }
@@ -31,6 +37,20 @@ public class TwoFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_two, container, false);
+        View myView = inflater.inflate(R.layout.fragment_two, container, false);
+        recyclerView = (RecyclerView) myView.findViewById(R.id.my_recycler_view);
+
+        //Set the layout and animation for this activity.
+        layoutManager = new LinearLayoutManager(getActivity());
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+
+        //Get the data of the Drivers.
+        data = Driver.getdriversFromFile("drivers.json", getActivity());
+
+        //Set the adapter
+        adapter = new CustomAdapter(data);
+        recyclerView.setAdapter(adapter);
+        return myView;
     }
 }

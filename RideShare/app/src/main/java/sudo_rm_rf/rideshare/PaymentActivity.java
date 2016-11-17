@@ -21,7 +21,7 @@ public class PaymentActivity extends AppCompatActivity {
             }
         });
 
-        venmo = (Button) findViewById(R.id.paybycash);
+        venmo = (Button) findViewById(R.id.venmo);
         venmo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
@@ -29,7 +29,7 @@ public class PaymentActivity extends AppCompatActivity {
             }
         });
 
-        paypal = (Button) findViewById(R.id.paybycash);
+        paypal = (Button) findViewById(R.id.paypal);
         paypal.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click

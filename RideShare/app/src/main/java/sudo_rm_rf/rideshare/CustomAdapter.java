@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.plus.model.people.Person;
+import com.google.android.gms.wallet.PaymentMethodTokenizationType;
 
 import java.util.ArrayList;
 
@@ -20,6 +21,7 @@ import sudo_rm_rf.rideshare.Driver;
 public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHolder> {
 
     private ArrayList<Driver> dataset;
+    private boolean is_done;
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
 
@@ -28,6 +30,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         TextView textViewArrival;
         ImageView imageViewIcon;
         Driver driver;
+        boolean payment;
 
 
         public MyViewHolder(final View itemView) {
@@ -36,7 +39,6 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             this.textViewDestination = (TextView) itemView.findViewById(R.id.person_departure);
             this.imageViewIcon = (ImageView) itemView.findViewById(R.id.person_photo);
             this.textViewArrival = (TextView) itemView.findViewById(R.id.person_arrival);
-
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -47,7 +49,11 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                     b.putString("time", driver.getTime());
                     b.putString("date", driver.getDate());
                     b.putInt("picture", driver.getProfilePicture());
-                    Intent cur = new Intent(itemView.getContext(),PersonProfilePage.class);
+                    Intent cur;
+                    if (!payment)
+                        cur = new Intent(itemView.getContext(),PersonProfilePage.class);
+                    else
+                        cur = new Intent(itemView.getContext(), PaymentActivity.class);
                     cur.putExtras(b);
                     itemView.getContext().startActivity(cur);
                 }
@@ -57,9 +63,10 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
     }
 
-    public CustomAdapter(ArrayList<Driver> data) {
+    public CustomAdapter(ArrayList<Driver> data, boolean is_fin) {
 
         this.dataset = data;
+        this.is_done = is_fin;
     }
 
     @Override
@@ -82,6 +89,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         String depart = dataset.get(listPosition).getDeparture();
         String arrival = dataset.get(listPosition).getArrival();
         holder.driver = dataset.get(listPosition);
+        holder.payment = is_done;
 
         textViewName.setText(dataset.get(listPosition).getName());
         textViewDestination.setText(depart);

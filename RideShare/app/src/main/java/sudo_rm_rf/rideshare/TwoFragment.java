@@ -49,7 +49,7 @@ public class TwoFragment extends Fragment {
         data = Driver.getdriversFromFile("drivers.json", getActivity());
 
         //Set the adapter
-        adapter = new CustomAdapter(data);
+        adapter = new CustomAdapter(data, true);
         recyclerView.setAdapter(adapter);
         return myView;
     }

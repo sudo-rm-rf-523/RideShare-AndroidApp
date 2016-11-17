@@ -48,7 +48,7 @@ public class NewsFeed extends AppCompatActivity {
         data = Driver.getdriversFromFile("drivers.json", this);
 
         //Set the adapter
-        adapter = new CustomAdapter(data);
+        adapter = new CustomAdapter(data, false);
         recyclerView.setAdapter(adapter);
 
 

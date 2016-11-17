@@ -85,17 +85,7 @@ public class WelcomeActivity extends AppCompatActivity implements OnClickListene
 
     @Override
     public void onClick(View v) {
-
-
-//        switch (v.getId())
-//        {
-//            case (R.id.facebook):
-//            {
-//                startActivity(new Intent(WelcomeActivity.this,TabActivity.class ));
-//                System.out.print("Method invoked");
-//            }
-//        }
-
+        
     }
 
 

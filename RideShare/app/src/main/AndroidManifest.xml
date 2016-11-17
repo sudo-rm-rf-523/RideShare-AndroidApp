@@ -30,38 +30,42 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".NewsFeed"
-            android:theme="@style/NewsFeedBar"
-            >
+        <activity
+            android:name=".NewsFeed"
+            android:theme="@style/NewsFeedBar">
 
             <!-- android:parentActivityName=".searchActivity" -->
             <!-- &lt;!&ndash; Parent activity meta-data to support 4.0 and lower &ndash;&gt; -->
             <!-- <meta-data -->
             <!-- android:name="android.support.PARENT_ACTIVITY" -->
             <!-- android:value=".searchActivity" /> -->
-            <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
 
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
-            <!--</intent-filter>-->
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name=".TabActivity"
-            android:theme="@style/MyMaterialTheme">
-
-        </activity>
+            android:theme="@style/MyMaterialTheme" />
         <activity
             android:name=".PersonProfilePage"
-            android:theme="@style/PersonalProfile">
-
-        </activity>
-        <activity android:name=".WelcomeActivity"
+            android:theme="@style/PersonalProfile" />
+        <activity
+            android:name=".WelcomeActivity"
             android:theme="@style/PersonalProfile">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".PaymentActivity">
+
+        </activity>
+        <activity android:name=".FeedbackActivity">
+
         </activity>
     </application>
 

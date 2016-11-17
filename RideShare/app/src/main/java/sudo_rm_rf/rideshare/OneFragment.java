@@ -59,7 +59,8 @@ public class OneFragment extends Fragment implements View.OnClickListener {
     private DatePickerDialog fromDatePickerDialog;
     private DatePickerDialog toDatePickerDialog;
     private TimePickerDialog timePickerDialog;
-
+    private boolean fromPlaceclicked = false;
+    private boolean toPlaceclicked = false;
     private SimpleDateFormat dateFormatter;
 
     private int mYear, mMonth, mDay, mHour, mMinute;
@@ -125,6 +126,7 @@ public class OneFragment extends Fragment implements View.OnClickListener {
             @Override
             public void onClick(View v) {
                 try {
+                    fromPlaceclicked = true;
                     PlacePicker.IntentBuilder intentBuilder =
                             new PlacePicker.IntentBuilder();
                     intentBuilder.setLatLngBounds(BOUNDS_MOUNTAIN_VIEW);
@@ -142,6 +144,7 @@ public class OneFragment extends Fragment implements View.OnClickListener {
             @Override
             public void onClick(View v) {
                 try {
+                    toPlaceclicked = true;
                     PlacePicker.IntentBuilder intentBuilder =
                             new PlacePicker.IntentBuilder();
                     intentBuilder.setLatLngBounds(BOUNDS_MOUNTAIN_VIEW);
@@ -287,7 +290,15 @@ public class OneFragment extends Fragment implements View.OnClickListener {
             }
 
             String temp = name.toString() + address.toString().replaceAll("\\)", "");
-            fromPlace.setText(name.toString());
+            if (fromPlaceclicked == true) {
+                fromPlace.setText(name.toString());
+                fromPlaceclicked = false;
+            }
+            else
+            {
+                toPlace.setText(name.toString());
+                toPlaceclicked = false;
+            }
 
         } else {
             super.onActivityResult(requestCode, resultCode, data);

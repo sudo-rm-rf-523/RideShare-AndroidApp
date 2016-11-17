@@ -79,7 +79,7 @@ public class PersonProfilePage extends AppCompatActivity {
         Intent intent = new Intent(this, PaymentActivity.class);
         startActivity(intent);
     }
-    
+
     private void findViewsById() {
         dateView = (TextView) findViewById(R.id.leave_date);
         timeView = (TextView) findViewById(R.id.leave_time);

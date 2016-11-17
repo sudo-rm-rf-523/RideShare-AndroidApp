@@ -21,7 +21,8 @@ public class FeedbackActivity extends AppCompatActivity {
         feedback.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Perform action on click
-                finish();
+                Intent intent = new Intent(FeedbackActivity.this, searchActivity.class);
+                startActivity(intent);
             }
         });
 

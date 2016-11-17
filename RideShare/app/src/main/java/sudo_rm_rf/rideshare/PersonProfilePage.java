@@ -55,6 +55,8 @@ public class PersonProfilePage extends AppCompatActivity {
 
 
 
+//            Button fb = (Button) findViewById(R.id.fb_button);
+//            fb.setBackgroundColor(getResources().getColor(R.color.grey));
 
             Button b = (Button) findViewById(R.id.invite_button);
             String button_text = b.getText().toString();

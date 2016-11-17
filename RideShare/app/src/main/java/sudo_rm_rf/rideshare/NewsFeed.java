@@ -18,6 +18,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class NewsFeed extends AppCompatActivity {
     private static RecyclerView.Adapter adapter;
@@ -25,7 +26,7 @@ public class NewsFeed extends AppCompatActivity {
     private static RecyclerView recyclerView;
     private static ArrayList<Driver> data;
     static View.OnClickListener myOnClickListener;
-    private static ArrayList<Integer> removedItems;
+    private static List<Integer> removedItems;
 
 
     @Override
@@ -46,6 +47,7 @@ public class NewsFeed extends AppCompatActivity {
 
         //Get the data of the Drivers.
         data = Driver.getdriversFromFile("drivers.json", this);
+        data = new ArrayList<Driver>(data.subList(0,6));
 
         //Set the adapter
         adapter = new CustomAdapter(data, false);

@@ -47,6 +47,7 @@ public class TwoFragment extends Fragment {
 
         //Get the data of the Drivers.
         data = Driver.getdriversFromFile("drivers.json", getActivity());
+        data = new ArrayList<Driver>(data.subList(8,data.size()-1));
 
         //Set the adapter
         adapter = new CustomAdapter(data, true);

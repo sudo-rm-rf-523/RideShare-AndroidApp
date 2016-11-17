@@ -143,6 +143,21 @@
                 android:elevation="4dp"
                 android:textColor="@android:color/white"
                 android:text="Send Invite"/>
+
+            <Button
+                android:id="@+id/payment_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="makePaymentClick"
+                android:layout_margin="5dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:padding="12dp"
+                android:textSize="24sp"
+                android:background="@color/colorPrimaryDark"
+                android:elevation="4dp"
+                android:textColor="@android:color/white"
+                android:text="Make Payment"/>
         </LinearLayout>
     </RelativeLayout>
 </ScrollView>

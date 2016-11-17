@@ -37,6 +37,9 @@ public class PaymentActivity extends AppCompatActivity {
             }
         });
 
+        getSupportActionBar().setDisplayOptions(android.app.ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.payment_action_bar);
+
     }
 
 

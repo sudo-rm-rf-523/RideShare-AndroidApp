@@ -24,6 +24,9 @@ public class FeedbackActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        getSupportActionBar().setDisplayOptions(android.app.ActionBar.DISPLAY_SHOW_CUSTOM);
+        getSupportActionBar().setCustomView(R.layout.feedback_action_bar);
     }
 
     public void addListenerOnRatingBar() {

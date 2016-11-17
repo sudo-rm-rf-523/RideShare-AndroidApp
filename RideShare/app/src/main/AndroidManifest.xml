@@ -32,7 +32,9 @@
         </activity>
         <activity
             android:name=".NewsFeed"
-            android:theme="@style/NewsFeedBar">
+            android:theme="@style/NewsFeedBar"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
 
             <!-- android:parentActivityName=".searchActivity" -->
             <!-- &lt;!&ndash; Parent activity meta-data to support 4.0 and lower &ndash;&gt; -->
@@ -48,23 +50,33 @@
         </activity>
         <activity
             android:name=".TabActivity"
-            android:theme="@style/MyMaterialTheme" />
+            android:theme="@style/MyMaterialTheme"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".PersonProfilePage"
-            android:theme="@style/PersonalProfile" />
+            android:theme="@style/PersonalProfile"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".WelcomeActivity"
-            android:theme="@style/PersonalProfile">
+            android:theme="@style/PersonalProfile"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".PaymentActivity">
+        <activity android:name=".PaymentActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
 
         </activity>
-        <activity android:name=".FeedbackActivity">
+        <activity android:name=".FeedbackActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
 
         </activity>
     </application>

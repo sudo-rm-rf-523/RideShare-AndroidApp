@@ -18,13 +18,14 @@
 
     <ImageView
         android:layout_width="36dp"
-        android:layout_height="48dp"
+        android:layout_height="15dp"
         android:id = "@+id/vertical_bar"
         android:layout_below="@id/from_place"
         android:src="@drawable/dotted_vert"
         android:layout_marginTop="6dp"
         android:layout_marginStart="20dp"
         android:layerType="software" />
+
 
     <EditText
         android:id="@+id/to_place"
@@ -90,14 +91,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="25dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="12dp"
             android:text="No. of Passengers"
+            android:textSize="18sp"
             android:textColor="@android:color/black"/>
 
         <Spinner
             android:id="@+id/spinner1"
             android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
             android:layout_height="40dip"
             android:layout_marginTop="20dip">
 

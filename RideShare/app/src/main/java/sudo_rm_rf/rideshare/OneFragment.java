@@ -88,8 +88,8 @@ public class OneFragment extends Fragment implements View.OnClickListener {
         fromDateEtxt = (EditText) myView.findViewById(R.id.etxt_fromdate);
         fromDateEtxt.setInputType(InputType.TYPE_NULL);
         fromDateEtxt.requestFocus();
-        toDateEtxt = (EditText) myView.findViewById(R.id.etxt_todate);
-        toDateEtxt.setInputType(InputType.TYPE_NULL);
+        //toDateEtxt = (EditText) myView.findViewById(R.id.etxt_todate);
+        //toDateEtxt.setInputType(InputType.TYPE_NULL);
         timeEtxt = (EditText) myView.findViewById(R.id.etxt_time);
         timeEtxt.setInputType(InputType.TYPE_NULL);
 
@@ -114,10 +114,10 @@ public class OneFragment extends Fragment implements View.OnClickListener {
         } else if(view == timeEtxt) {
             timePickerDialog.show();
         }
-        else if (view == toDateEtxt)
-        {
-            toDatePickerDialog.show();
-        }
+//        else if (view == toDateEtxt)
+//        {
+//            //toDatePickerDialog.show();
+//        }
     }
 
     private void setDateTimeField() {
@@ -168,15 +168,15 @@ public class OneFragment extends Fragment implements View.OnClickListener {
         }, newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
 
         Calendar toCalendar = Calendar.getInstance();
-        toDatePickerDialog = new DatePickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
-
-            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
-                Calendar newDate = Calendar.getInstance();
-                newDate.set(year, monthOfYear, dayOfMonth);
-                toDateEtxt.setText(dateFormatter.format(newDate.getTime()));
-            }
-
-        }, toCalendar.get(Calendar.YEAR), toCalendar.get(Calendar.MONTH), toCalendar.get(Calendar.DAY_OF_MONTH));
+//        toDatePickerDialog = new DatePickerDialog(getActivity(), new DatePickerDialog.OnDateSetListener() {
+//
+//            public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+//                Calendar newDate = Calendar.getInstance();
+//                newDate.set(year, monthOfYear, dayOfMonth);
+//                toDateEtxt.setText(dateFormatter.format(newDate.getTime()));
+//            }
+//
+//        }, toCalendar.get(Calendar.YEAR), toCalendar.get(Calendar.MONTH), toCalendar.get(Calendar.DAY_OF_MONTH));
 
         // Get Current Time
         final Calendar c = Calendar.getInstance();
@@ -208,7 +208,7 @@ public class OneFragment extends Fragment implements View.OnClickListener {
         findViewsById(myView);
         setDateTimeField();
         fromDateEtxt.setOnClickListener(this);
-        toDateEtxt.setOnClickListener(this);
+        //toDateEtxt.setOnClickListener(this);
         timeEtxt.setOnClickListener(this);
         v.setOnClickListener(new View.OnClickListener() {
 

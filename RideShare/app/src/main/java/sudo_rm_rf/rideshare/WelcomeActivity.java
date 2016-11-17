@@ -86,7 +86,7 @@ public class WelcomeActivity extends AppCompatActivity implements OnClickListene
 
     @Override
     public void onClick(View v) {
-        
+
     }
 
 

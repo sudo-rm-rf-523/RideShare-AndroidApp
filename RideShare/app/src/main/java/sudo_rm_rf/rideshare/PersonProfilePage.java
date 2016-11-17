@@ -55,8 +55,8 @@ public class PersonProfilePage extends AppCompatActivity {
 
 
 
-//            Button fb = (Button) findViewById(R.id.fb_button);
-//            fb.setBackgroundColor(getResources().getColor(R.color.grey));
+            Button fb = (Button) findViewById(R.id.fb_button);
+            fb.setBackgroundColor(getResources().getColor(R.color.grey));
 
             Button b = (Button) findViewById(R.id.invite_button);
             String button_text = b.getText().toString();
@@ -64,13 +64,15 @@ public class PersonProfilePage extends AppCompatActivity {
                 text = "You're invitation has been sent!";
                 Toast toast = Toast.makeText(context, text, duration);
                 toast.show();
-                b.setText("Undo Send Invitation");
+                b.setText("Undo Invitation");
+                fb.setBackgroundColor(getResources().getColor(R.color.fbcolor));
             }
             else {
                 text = "You're invitation has been recinded!";
                 Toast toast = Toast.makeText(context, text, duration);
                 toast.show();
                 b.setText("Send Invitation");
+                fb.setBackgroundColor(getResources().getColor(R.color.grey));
             }
 
 

@@ -15,6 +15,7 @@
     <color name="dot_dark_screen2">#818785</color>
     <color name="dot_dark_screen3">#818785</color>
     <color name="dot_dark_screen4">#818785</color>
+    <color name="fbcolor">#2D4585</color>
 
     <!-- dots active colors -->
     <color name="dot_light_screen1">#000000</color>

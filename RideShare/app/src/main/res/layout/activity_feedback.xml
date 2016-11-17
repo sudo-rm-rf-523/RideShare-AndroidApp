@@ -15,8 +15,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/dollars"
         android:layout_marginTop="20dp"
-        android:orientation="vertical"
-        android:id="@+id/linearLayout">
+        android:orientation="vertical">
 
 
         <TextView
@@ -28,24 +27,23 @@
             android:textSize="20sp"
             android:textColor="@android:color/black"/>
 
-    <RatingBar
-        android:id="@+id/ratingBar"
-        android:layout_gravity="center"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_height="wrap_content"
-        android:progressTint="@color/colorPrimary"
-        android:progressBackgroundTint="@color/colorPrimaryDark"
-        android:secondaryProgressTint="@color/colorPrimaryDark"
-        android:numStars="5"
-        android:stepSize="0.5"
-        android:rating="3.0" />
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:progressTint="@color/colorPrimary"
+            android:progressBackgroundTint="@color/colorPrimaryDark"
+            android:secondaryProgressTint="@color/colorPrimaryDark"
+            android:numStars="5"
+            android:stepSize="0.5"
+            android:rating="3.0" />
 
 
 
         <EditText
             android:inputType="textMultiLine"
-            android:id="@+id/edit_query"
             android:scrollbars="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -54,9 +52,15 @@
             android:layout_marginTop="20dp"
             android:hint="Optional Feedback "/>
 
-
-
-    
-
-
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SEND FEEDBACK"
+            android:background="@android:color/black"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_marginTop="15dp"
+            android:id="@+id/feedback"
+            />
+    </LinearLayout>
 </RelativeLayout>

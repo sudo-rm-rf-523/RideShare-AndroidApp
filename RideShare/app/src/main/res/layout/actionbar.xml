@@ -23,7 +23,7 @@
         android:layout_toRightOf="@id/title"
         android:layout_marginLeft="50dp"
         android:layout_alignBottom="@id/title"
-        android:src="@drawable/logo"/>
+        android:src="@drawable/ic_logo"/>
 
 
 

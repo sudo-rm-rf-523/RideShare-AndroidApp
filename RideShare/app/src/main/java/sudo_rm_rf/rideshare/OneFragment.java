@@ -210,29 +210,118 @@ public class OneFragment extends Fragment implements View.OnClickListener {
         fromDateEtxt.setOnClickListener(this);
         //toDateEtxt.setOnClickListener(this);
         timeEtxt.setOnClickListener(this);
+
+        fromDateEtxt.setOnFocusChangeListener(new View.OnFocusChangeListener()
+        {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus)
+            {
+                if (!hasFocus)
+                {
+                    if (fromDateEtxt.getText().length() != 0)
+                    {
+                        fromDateEtxt.setError(null);
+                    }
+
+                }
+            }
+        });
+
+        fromPlace.setOnFocusChangeListener(new View.OnFocusChangeListener()
+        {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus)
+            {
+                if (!hasFocus)
+                {
+                    if (fromPlace.getText().length() != 0)
+                    {
+                        fromPlace.setError(null);
+                    }
+
+                }
+            }
+        });
+
+        toPlace.setOnFocusChangeListener(new View.OnFocusChangeListener()
+        {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus)
+            {
+                if (!hasFocus)
+                {
+                    if (toPlace.getText().length() != 0)
+                    {
+                        toPlace.setError(null);
+                    }
+
+                }
+            }
+        });
+
+        timeEtxt.setOnFocusChangeListener(new View.OnFocusChangeListener()
+        {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus)
+            {
+                if (!hasFocus)
+                {
+                    if (timeEtxt.getText().length() != 0)
+                    {
+                        timeEtxt.setError(null);
+                    }
+
+                }
+            }
+        });
+
+
+
+
         v.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
+                boolean valid = true;
                 if (fromDateEtxt.getText().length() == 0)
                 {
+                    valid = false;
                     fromDateEtxt.setError("Please enter a starting date");
                 }
+                else
+                    fromDateEtxt.setError(null);
+
                 if (fromPlace.getText().length() == 0)
                 {
+                    valid = false;
+
                     fromPlace.setError("Please enter a starting place");
                 }
+                else
+                    fromPlace.setError(null);
+
                 if (toPlace.getText().length() == 0)
                 {
+                    valid = false;
+
                     toPlace.setError("Please enter a destination");
                 }
+                else
+                    toPlace.setError(null);
+
                 if (timeEtxt.getText().length() == 0) {
+                    valid = false;
 
                     timeEtxt.setError("Please enter a convenient time");
                 }
-                 else {
-                    Intent intent = new Intent(getActivity(), NewsFeed.class);
-                    startActivity(intent);
+
+                else {
+                    timeEtxt.setError(null);
                 }
+                if (valid){
+                    startActivity(new Intent(getActivity(), NewsFeed.class));
+                }
+
+
             }
 
         });

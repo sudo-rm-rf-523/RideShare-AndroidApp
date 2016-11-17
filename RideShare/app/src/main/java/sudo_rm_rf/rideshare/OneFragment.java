@@ -98,7 +98,6 @@ public class OneFragment extends Fragment implements View.OnClickListener {
         toPlace = (EditText) myView.findViewById(R.id.to_place);
         toPlace.setInputType(InputType.TYPE_NULL);
 
-
         mspin=(Spinner) myView.findViewById(R.id.spinner1);
         Integer[] items = new Integer[]{1,2,3,4};
         ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer>(getActivity(),android.R.layout.simple_spinner_item, items);
@@ -204,6 +203,7 @@ public class OneFragment extends Fragment implements View.OnClickListener {
         // Inflate the layout for this fragment
         final View myView = inflater.inflate(R.layout.fragment_one, container, false);
         final Button v = (Button) myView.findViewById(R.id.button);
+        final Button last = (Button) myView.findViewById(R.id.button2);
         dateFormatter = new java.text.SimpleDateFormat("dd-MM-yyyy", Locale.US);
         findViewsById(myView);
         setDateTimeField();
@@ -213,10 +213,36 @@ public class OneFragment extends Fragment implements View.OnClickListener {
         v.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), NewsFeed.class);
-                startActivity(intent);
+                if (fromDateEtxt.getText().length() == 0)
+                {
+                    fromDateEtxt.setError("Please enter a starting date");
+                }
+                if (fromPlace.getText().length() == 0)
+                {
+                    fromPlace.setError("Please enter a starting place");
+                }
+                if (toPlace.getText().length() == 0)
+                {
+                    toPlace.setError("Please enter a destination");
+                }
+                if (timeEtxt.getText().length() == 0) {
+
+                    timeEtxt.setError("Please enter a convenient time");
+                }
+                 else {
+                    Intent intent = new Intent(getActivity(), NewsFeed.class);
+                    startActivity(intent);
+                }
             }
 
+        });
+
+        last.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View v) {
+                fromPlace.setText("Champaign");
+                toPlace.setText("Chicago");
+            }
         });
         //radio_group = (RadioGroup) myView.findViewById(R.id.trip_type);
         //radio_group.check(0);

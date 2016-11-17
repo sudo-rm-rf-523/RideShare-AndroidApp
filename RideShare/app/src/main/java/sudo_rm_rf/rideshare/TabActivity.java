@@ -54,7 +54,7 @@ public class TabActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new OneFragment(), "LOOK FOR A RIDE");
-        adapter.addFragment(new TwoFragment(), "PENDING REQUESTS");
+        adapter.addFragment(new TwoFragment(), "COMPLETED RIDES");
         viewPager.setAdapter(adapter);
     }
 

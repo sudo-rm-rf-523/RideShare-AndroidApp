@@ -218,32 +218,32 @@ public class OneFragment extends Fragment implements View.OnClickListener {
             }
 
         });
-        radio_group = (RadioGroup) myView.findViewById(R.id.trip_type);
-        radio_group.check(0);
+        //radio_group = (RadioGroup) myView.findViewById(R.id.trip_type);
+        //radio_group.check(0);
 
         return myView;
     }
 
-    public void onRadioButtonClicked(View view) {
-        // Is the button now checked?
-        boolean checked = ((RadioButton) view).isChecked();
-
-        // Check which radio button was clicked
-        switch(view.getId()) {
-            case R.id.one_way:
-                if (checked)
-                    toDateEtxt.setEnabled(false);
-                    toDateEtxt.setVisibility(View.GONE);
-                    // Pirates are the best
-                    break;
-            case R.id.round_trip:
-                if (checked)
-                    // Ninjas rule
-                    toDateEtxt.setEnabled(true);
-                    toDateEtxt.setVisibility(View.VISIBLE);
-                    break;
-        }
-    }
+//    public void onRadioButtonClicked(View view) {
+//        // Is the button now checked?
+//        boolean checked = ((RadioButton) view).isChecked();
+//
+//        // Check which radio button was clicked
+//        switch(view.getId()) {
+//            case R.id.one_way:
+//                if (checked)
+//                    toDateEtxt.setEnabled(false);
+//                    toDateEtxt.setVisibility(View.GONE);
+//                    // Pirates are the best
+//                    break;
+//            case R.id.round_trip:
+//                if (checked)
+//                    // Ninjas rule
+//                    toDateEtxt.setEnabled(true);
+//                    toDateEtxt.setVisibility(View.VISIBLE);
+//                    break;
+//        }
+//    }
 
     @Override
     public void onActivityResult(int requestCode,

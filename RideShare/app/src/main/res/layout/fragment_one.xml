@@ -42,27 +42,28 @@
                 android:drawableLeft="@drawable/to_icon"/>
         </LinearLayout>
 
-        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="15dip"
-            android:gravity="center_horizontal"
-            android:id = "@+id/trip_type"
-            >
-            <RadioButton android:id="@+id/one_way"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="One Way "
-                android:onClick="onRadioButtonClicked"
-                />
-            <RadioButton android:id="@+id/round_trip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Round Trip"
-                android:onClick="onRadioButtonClicked"
-                android:layout_marginLeft="40dip"/>
-        </RadioGroup>
+        <!--<RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:layout_marginTop="15dip"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:id = "@+id/trip_type"-->
+            <!--&gt;-->
+            <!--<RadioButton android:id="@+id/one_way"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="One Way "-->
+                <!--android:onClick="onRadioButtonClicked"-->
+                <!--/>-->
+            <!---->
+            <!--<RadioButton android:id="@+id/round_trip"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Round Trip"-->
+                <!--android:onClick="onRadioButtonClicked"-->
+                <!--android:layout_marginLeft="40dip"/>-->
+        <!--</RadioGroup>-->
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -101,7 +102,7 @@
             >
             <EditText
                 android:id="@+id/etxt_time"
-                android:layout_width="290dip"
+                android:layout_width="252dip"
                 android:layout_height="40dip"
                 android:layout_weight=".5"
                 android:hint="Time"
@@ -110,12 +111,22 @@
                 android:layout_marginTop="20dip"
                 android:drawableLeft="@android:drawable/ic_menu_day"/>
 
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/group"
+                android:layout_marginTop="25dip"
+                android:src="@drawable/ic_group_name"
+
+                />
+
             <Spinner
                 android:id="@+id/spinner1"
                 android:layout_width="wrap_content"
                 android:layout_height="40dip"
                 android:layout_marginTop="20dip"
-                android:layout_marginLeft="15dip">
+                android:layout_marginLeft="10dip">
 
             </Spinner>
 
@@ -132,6 +143,32 @@
             android:id="@+id/button"
             android:layout_marginTop="22dip"
             />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Last Search"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:layout_gravity="left"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="105dip"
+            />
+        <Button
+            android:layout_width="380dip"
+            android:layout_height="55dip"
+            android:text = " CHM - CHI                                   Nov 7 2016 ＞"
+            android:textAllCaps="false"
+            android:textSize="18dp"
+            android:textAlignment="textStart"
+            android:textColor="@android:color/black"
+            android:background="@drawable/my_button_bg"
+            android:id="@+id/button2"
+            android:layout_marginTop="10dip"
+            />
+
+
+
 
     </LinearLayout>
 

@@ -21,7 +21,7 @@ public class TabActivity extends AppCompatActivity {
     private int[] tabIcons = {
             R.drawable.ic_car,
             R.drawable.ic_group_name,
-            R.drawable.ic_group_name
+            R.drawable.ic_checkbox2
     };
 
     @Override
@@ -56,8 +56,8 @@ public class TabActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new OneFragment(), "SEARCH");
-        adapter.addFragment(new TwoFragment(), "COMPLETED");
         adapter.addFragment(new ThreeFragment(), "INVITES");
+        adapter.addFragment(new TwoFragment(), "COMPLETED");
         viewPager.setAdapter(adapter);
     }
 

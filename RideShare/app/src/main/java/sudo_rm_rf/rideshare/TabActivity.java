@@ -20,6 +20,7 @@ public class TabActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private int[] tabIcons = {
             R.drawable.ic_car,
+            R.drawable.ic_group_name,
             R.drawable.ic_group_name
     };
 
@@ -49,12 +50,14 @@ public class TabActivity extends AppCompatActivity {
     private void setupTabIcons() {
         tabLayout.getTabAt(0).setIcon(tabIcons[0]);
         tabLayout.getTabAt(1).setIcon(tabIcons[1]);
+        tabLayout.getTabAt(2).setIcon(tabIcons[2]);
     }
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new OneFragment(), "LOOK FOR A RIDE");
-        adapter.addFragment(new TwoFragment(), "COMPLETED RIDES");
+        adapter.addFragment(new OneFragment(), "SEARCH");
+        adapter.addFragment(new TwoFragment(), "COMPLETED");
+        adapter.addFragment(new ThreeFragment(), "INVITES");
         viewPager.setAdapter(adapter);
     }
 

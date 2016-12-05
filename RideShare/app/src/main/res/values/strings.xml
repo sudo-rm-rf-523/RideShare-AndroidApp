@@ -6,5 +6,12 @@
     <string name="next">NEXT</string>
     <string name="skip">SKIP</string>
     <string name="start">GOT IT</string>
+    <string name="sort">Sort by</string>
     <string name="test_string">X&lt;sup&gt;3&lt;/sup&gt;</string>
+
+    <string-array name="search_options">
+        <item>Destination</item>
+        <item>Source</item>
+        <item>Time</item>
+    </string-array>
 </resources>

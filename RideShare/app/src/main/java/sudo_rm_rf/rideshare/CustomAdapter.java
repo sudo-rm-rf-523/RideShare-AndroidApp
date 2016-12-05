@@ -12,6 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.plus.model.people.Person;
+import com.google.android.gms.vision.text.Text;
 import com.google.android.gms.wallet.PaymentMethodTokenizationType;
 
 import java.util.ArrayList;
@@ -27,6 +28,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
         TextView textViewName;
         TextView textViewDestination;
+        TextView textViewDistance;
         TextView textViewArrival;
         ImageView imageViewIcon;
         Driver driver;
@@ -39,6 +41,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
             this.textViewDestination = (TextView) itemView.findViewById(R.id.person_departure);
             this.imageViewIcon = (ImageView) itemView.findViewById(R.id.person_photo);
             this.textViewArrival = (TextView) itemView.findViewById(R.id.person_arrival);
+            this.textViewDistance = (TextView) itemView.findViewById(R.id.miles_away);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -49,6 +52,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
                     b.putString("time", driver.getTime());
                     b.putString("date", driver.getDate());
                     b.putInt("picture", driver.getProfilePicture());
+                    b.putString("distance", driver.getDistance());
                     Intent cur;
                     if (!payment)
                         cur = new Intent(itemView.getContext(),PersonProfilePage.class);
@@ -82,11 +86,13 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
 
         TextView textViewName = holder.textViewName;
         TextView textViewDestination = holder.textViewDestination;
+        TextView textViewDistance = holder.textViewDistance;
         ImageView imageView = holder.imageViewIcon;
         TextView textViewArrival = holder.textViewArrival;
 
 
         String depart = dataset.get(listPosition).getDeparture();
+        String distance = dataset.get(listPosition).getDistance();
         String arrival = dataset.get(listPosition).getArrival();
         holder.driver = dataset.get(listPosition);
         holder.payment = is_done;
@@ -95,6 +101,7 @@ public class CustomAdapter extends RecyclerView.Adapter<CustomAdapter.MyViewHold
         textViewDestination.setText(depart);
         textViewArrival.setText(arrival);
         imageView.setImageResource(dataset.get(listPosition).getProfilePicture());
+        textViewDistance.setText(distance);
     }
 
     @Override

@@ -42,7 +42,7 @@
             android:id="@+id/clock"
             android:src="@drawable/ic_clock"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="35dp"
+            android:layout_marginLeft="20dp"
             />
 
         <TextView
@@ -59,7 +59,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_marginTop="7dp"
-            android:layout_marginLeft="35dp"
+            android:layout_marginLeft="20dp"
             android:id="@+id/group"
             android:src="@drawable/ic_group_name"
             />
@@ -73,7 +73,17 @@
             android:layout_marginLeft="5dip"
             android:layout_marginTop="12dip"
             />
+        <Spinner
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="12dip"
+            android:id="@+id/dynamic_spinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/search_options"
+            android:prompt="@string/sort"
+            android:spinnerMode="dropdown"
 
+            />
     </LinearLayout>
 
 </LinearLayout>

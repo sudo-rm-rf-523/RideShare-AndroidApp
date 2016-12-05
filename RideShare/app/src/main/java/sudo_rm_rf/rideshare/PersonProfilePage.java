@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.w3c.dom.Text;
+
 import de.hdodenhof.circleimageview.CircleImageView;
 
 public class PersonProfilePage extends AppCompatActivity {
@@ -19,6 +21,7 @@ public class PersonProfilePage extends AppCompatActivity {
     private TextView profile_name;
     private Button inviteButton;
     private CircleImageView imageView;
+    private TextView distanceView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,5 +89,6 @@ public class PersonProfilePage extends AppCompatActivity {
         inviteButton = (Button) findViewById(R.id.invite_button);
         imageView = (CircleImageView) findViewById(R.id.user_profile_photo);
         profile_name = (TextView) findViewById(R.id.user_profile_name);
+        distanceView = (TextView) findViewById(R.id.miles_away);
     }
 }

@@ -28,6 +28,7 @@ public class Driver {
     //Declaring private instance variables.
     private String name;
     private String departure;
+    private String distance;
     private String arrival;
     private String time;
     private String date;
@@ -115,6 +116,8 @@ public class Driver {
 
     public int getProfilePicture() {return profilePicture; }
 
+    public String getDistance(){return distance;}
+
 
 
     public static ArrayList<Driver> getdriversFromFile(String filename, Context context){
@@ -142,6 +145,7 @@ public class Driver {
                 driver.profilePicture =  images[drivers.getJSONObject(i).getInt("image")];
                 driver.time = drivers.getJSONObject(i).getString("time");
                 driver.date = drivers.getJSONObject(i).getString("date");
+                driver.distance = drivers.getJSONObject(i).getString("distanceAway");
                 driverList.add(driver);
             }
         } catch (JSONException e) {

@@ -148,7 +148,8 @@
                     android:background="@color/grey"
                     android:textColor="@android:color/white"
                     android:textSize="20sp"
-                    android:text="Facebook Profile"/>
+                    android:onClick="makeToast"
+                    android:text="FB Message"/>
             </LinearLayout>
         </LinearLayout>
     </RelativeLayout>
